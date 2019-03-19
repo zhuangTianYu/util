@@ -16,5 +16,5 @@ const timestampToString = ({ timestamp, format = 'yyyy-MM-dd' }) => {
     .replace(/ss/g, ss)
 }
 
-console.log(timestampToString({ timeStamp: 100000 }))
-console.log(timestampToString({ timeStamp: 100000, format: 'yyyy年MM月dd日 hh时mm分ss秒' }))
+console.log(timestampToString({ timestamp: 100000 }))
+console.log(timestampToString({ timestamp: 100000, format: 'yyyy年MM月dd日 hh时mm分ss秒' }))
