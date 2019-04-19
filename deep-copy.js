@@ -1,9 +1,9 @@
 const obj = {
-	age: 12,
-	name: 'ming',
-	parent: {
-		mo: { name: 'hong' },
-		fa: { name: 'gang' }
+  age: 12,
+  name: 'ming',
+  parent: {
+    mo: { name: 'hong' },
+    fa: { name: 'gang' }
   },
   hobby: [
     { 'singsing': true },
@@ -15,8 +15,8 @@ const obj = {
 }
 
 const deepCopy = (obj) => {
-	const ret = {}
-	const copy = (source, assigner = ret) => {
+  const ret = {}
+  const copy = (source, assigner = ret) => {
     Object.keys(source).map(property => {
       if (typeof source[property] === 'object') {
         if (source[property] === null) {
@@ -29,7 +29,7 @@ const deepCopy = (obj) => {
       Object.assign(assigner, { [property]: source[property] })
     })
   }
-	return copy(obj), ret
+  return copy(obj), ret
 }
 
 console.log(deepCopy(obj))
